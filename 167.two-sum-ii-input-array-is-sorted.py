@@ -3,17 +3,17 @@
 #
 # [167] Two Sum II - Input Array Is Sorted
 #
+# get index of a list: lst.index(<val>)
 from typing import List
 # @lc code=start
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        nums_len = len(numbers)
-        for i in range(nums_len):
-            target_val = target - numbers[i]
-            if target_val in numbers: 
-                target_val_idx = numbers.index(target_val)
-                if i != target_val_idx:
-                    return sorted([i+1, target_val_idx+1])
+        for i in range(len(numbers)):
+            target_ele = target - numbers[i]
+            if target_ele in numbers:
+                idx = numbers.index(target_ele)
+                if i != idx:
+                    return [i+1, idx+1]
 # @lc code=end
 if __name__ == "__main__":
     solution = Solution() 
