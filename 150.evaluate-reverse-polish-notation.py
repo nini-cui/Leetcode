@@ -23,6 +23,7 @@ class Solution:
                 s.append(cur_res)
                 print(f'cur_res: {cur_res}')
             else:
+                # can convert to int here
                 s.append(token)
         
         if s:
