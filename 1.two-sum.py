@@ -1,7 +1,7 @@
 #
 # @lc app=leetcode id=1 lang=python3
 #
-# [1] Two Sum
+# [1] Two Sum using python
 #
 from typing import List
 # @lc code=start
