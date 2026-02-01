@@ -23,5 +23,5 @@ class Solution:
 # @lc code=end
 if __name__ == "__main__":
     s = Solution()
-    res = s.removeElement([3, 2, 2, 3], 3)
+    res = s.removeElement([0,1,2,2,3,0,4,2], 3)
     print(res)
