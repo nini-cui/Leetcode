@@ -7,23 +7,24 @@ from typing import List
 # @lc code=start
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
+        if nums == None or len(nums) == 0:
+            return 0
+        
         left = 0
         right = len(nums) - 1
+        while left < right:
+            m = left + int((right - left) / 2)
 
-        while right >= 0:
-            if nums[left] == target:
-                return left
-            elif nums[right] == target:
-                return right
-            elif nums[left] < target < nums[right]:
-                left += 1
-                right -= 1
-            elif nums[left] > target:
-                return left
-            elif nums[right] < target:
-                return right + 1
+            if nums[m] == target:
+                return m
+            elif nums[m] > target:
+                right = m
+            elif nums[m] < target:
+                left = m + 1
+        
+        return left + 1 if nums[left] < target else left
             
 # @lc code=end
 if __name__ == "__main__":
     s = Solution()
-    s.searchInsert([1, 3, 5, 6], 7)
+    s.searchInsert([1, 3, 5, 6], 4)
