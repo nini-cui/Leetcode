@@ -15,26 +15,26 @@ class Solution:
             current val with the max len
         """
 
-        hLen = len(haystack)
-        nLen = len(needle)
+        # hLen = len(haystack)
+        # nLen = len(needle)
 
-        # init i before the iteration starts
-        i = 0    
+        # # init i before the iteration starts
+        # i = 0    
 
-        while i < hLen:
-            j = i
-            nIndex = 0
+        # while i < hLen:
+        #     j = i
+        #     nIndex = 0
 
-            while j < hLen and nIndex < nLen and haystack[j] == needle[nIndex]:
-                j += 1
-                nIndex += 1
+        #     while j < hLen and nIndex < nLen and haystack[j] == needle[nIndex]:
+        #         j += 1
+        #         nIndex += 1
 
-            if nIndex == nLen:
-                return i
+        #     if nIndex == nLen:
+        #         return i
             
-            i += 1
+        #     i += 1
 
-        return -1
+        # return -1
 
         # this method using string comparasion
         # if haystack == needle:
