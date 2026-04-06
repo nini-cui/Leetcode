@@ -9,8 +9,8 @@ class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         # use strip, after split check if list is empty
         # print(s.strip())
-        # split_res = [item for item in s.split(" ") if item != ""]
-        # return len(split_res[-1])
+        split_res = [item for item in s.split(" ") if item != ""]
+        return len(split_res[-1])
 # @lc code=end
 if __name__ == "__main__":
     s = Solution()
