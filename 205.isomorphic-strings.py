@@ -5,6 +5,7 @@
 #
 from collections import defaultdict
 # @lc code=start
+# check the index of key
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         char_index_s = {}
