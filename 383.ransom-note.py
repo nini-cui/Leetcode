@@ -7,6 +7,8 @@ from collections import defaultdict
 # @lc code=start
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        # method 2: deduct values in ransomNote
+        
         ransomNote_dict = defaultdict(int)
         magazine_dict = defaultdict(int)
         for i in range(len(ransomNote)):
