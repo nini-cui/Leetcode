@@ -3,10 +3,13 @@
 #
 # [387] First Unique Character in a String
 #
-from collections import defaultdict
+from collections import defaultdict, Counter
 # @lc code=start
 class Solution:
     def firstUniqChar(self, s: str) -> int:
+        # method 1: use Counter: Counter(s)
+
+        # method 2
         res_dict = defaultdict(int)
 
         for i in s:
@@ -20,5 +23,4 @@ class Solution:
 # @lc code=end
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.firstUniqChar("aabb"))
-    # test
+    solution.firstUniqChar("aabb")
