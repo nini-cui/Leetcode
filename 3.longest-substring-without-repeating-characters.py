@@ -9,26 +9,34 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         max_len = len(s)
         max_str = ""
+        if max_len < 2:
+            return len(s)
+
         for i in range(max_len):
             left = i
-            right = i + 1
-            cur_max_str = ""
-            while right < max_len:
-                cur_str = s[left: right]
-                idx = cur_str.find(s[right])
+            right = left + 1
+            cur_max_str = s[left]
+
+            while right <= max_len:
+                cur_str = s[left:right]
                 if len(cur_str) > len(cur_max_str):
                     cur_max_str = cur_str
-                    right += 1
-                
-                if idx != -1:
-                    if len(cur_max_str) > len(max_str):
-                        max_str = cur_max_str
+
+                if right == max_len:
                     break
 
-        return max_str
+                if s[right] in cur_str:
+                    break
 
+                right += 1
+
+            if len(cur_max_str) > len(max_str):
+                max_str = cur_max_str
+
+        return len(max_str)
+ 
 
 # @lc code=end
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.lengthOfLongestSubstring("pwwkew"))
+    print(solution.lengthOfLongestSubstring("au"))
